@@ -65,7 +65,7 @@ public class JSAkkaTester extends AllDirectives{
                         () -> entity(Jackson.unmarshaller(PackageDecoded.class),
                                 msg -> {
                                     manager.tell(msg, ActorRef.noSender());
-                                    return complete("it's fine brah");
+                                    return complete("Server is working");
                                 })));
     }
 
