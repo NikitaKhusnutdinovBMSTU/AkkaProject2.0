@@ -5,10 +5,11 @@ import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class Storage extends AbstractActor {
-    private ArrayList<PackageDecoded> data = new ArrayList<>();
+    private HashMap<Integer, PackageDecoded> data = new HashMap<>();
 
     @Override
     public Receive createReceive() {
