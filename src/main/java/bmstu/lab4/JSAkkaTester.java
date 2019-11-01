@@ -3,6 +3,7 @@ package bmstu.lab4;
 import akka.NotUsed;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
+import akka.actor.Props;
 import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
@@ -20,14 +21,16 @@ import static akka.http.javadsl.unmarshalling.StringUnmarshallers.INTEGER;
 
 public class JSAkkaTester extends AllDirectives{
 
-    static ActorRef mainActor;
+    static ActorRef manager;
 
     public static void main(String[] args) throws Exception{
 
         ActorSystem system = ActorSystem.create("routes");
+        manager = system.actorOf(Props.create(Manager.class));
 
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
+
         JSAkkaTester app = new JSAkkaTester();
 
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = app.jsTesterRoute().flow(system, materializer);
@@ -52,7 +55,7 @@ public class JSAkkaTester extends AllDirectives{
                 get(
                         () -> parameter("packageId", (packageId) ->
                             {
-                                Future<Object> result = Patterns.ask(mainActor, packageId, 5000);
+                                Future<Object> result = Patterns.ask(manager, packageId, 5000);
                                 return completeOKWithFuture(result, Jackson.marshaller());
                             }
                         )
@@ -60,7 +63,7 @@ public class JSAkkaTester extends AllDirectives{
                 post(
                         () -> entity(Jackson.unmarshaller(PackageDecoded.class),
                                 msg -> {
-                                    mainActor.tell(msg, ActorRef.noSender());
+                                    manager.tell(msg, ActorRef.noSender());
                                     return complete("");
                                 })));
     }
