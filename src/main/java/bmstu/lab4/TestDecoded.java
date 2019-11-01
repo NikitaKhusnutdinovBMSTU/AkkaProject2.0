@@ -19,4 +19,8 @@ public class TestDecoded {
         this.result = "NONE";
     }
 
+    public int[] getParams(){
+        return params;
+    }
+
 }
