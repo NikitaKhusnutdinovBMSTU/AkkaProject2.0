@@ -27,6 +27,7 @@ public class TestDecoded {
 
     public void setResult(String res){
         this.result = res;
+        this.checkResults();
     }
 
     public String getResult(){
