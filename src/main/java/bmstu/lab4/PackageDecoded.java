@@ -7,13 +7,13 @@ public class PackageDecoded {
     private final int packageId;
     private final String jsScript;
     private final String functionName;
-    private final TestsDecoded[] tests;
+    private final TestDecoded[] tests;
 
     @JsonCreator
     public PackageDecoded(@JsonProperty("packageId") String packageId,
                           @JsonProperty("jsSript") String jsScript,
                           @JsonProperty("functionName") String functionName,
-                          @JsonProperty("tests") TestsDecoded[] tests){
+                          @JsonProperty("tests") TestDecoded[] tests){
         this.packageId = Integer.parseInt(packageId);
         this.jsScript = jsScript;
         this.functionName = functionName;
@@ -29,7 +29,7 @@ public class PackageDecoded {
         return functionName;
     }
 
-    public TestsDecoded[] getTests(){
+    public TestDecoded[] getTests(){
         return tests;
     }
 }
