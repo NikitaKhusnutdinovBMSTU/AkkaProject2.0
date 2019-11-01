@@ -13,6 +13,10 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 import java.util.concurrent.CompletionStage;
 
+
+import static akka.http.javadsl.server.Directives.*;
+import static akka.http.javadsl.unmarshalling.StringUnmarshallers.INTEGER
+
 public class JSAkkaTester extends AllDirectives{
 
     public static void main(String[] args) throws Exception{
@@ -23,7 +27,7 @@ public class JSAkkaTester extends AllDirectives{
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         JSAkkaTester app = new JSAkkaTester();
 
-        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = app.createRoute().flow(system, materializer);
+        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = app.jsTesterRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow, ConnectHttp.toHost("localhost", 8080), materializer);
         System.out.println("Server online on localhost:8080/");
         System.in.read();
@@ -32,8 +36,19 @@ public class JSAkkaTester extends AllDirectives{
 
     }
 
-    private Route createRoute(){
-        return concat(path("test", () -> get(() -> complete("hello"))));
+    private Route jsTesterRoute(){
+
+
+        return concat(
+                path("", () -> 
+                        getFromResource("web/index.html")
+                ),
+                pathPrefix("get", () ->
+                        path(INTEGER, packID -> concat(
+
+                                get(() -> )
+                        )))
+        );
     }
 
 }
