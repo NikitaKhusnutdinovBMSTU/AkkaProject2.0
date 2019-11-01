@@ -27,6 +27,7 @@ public class JSExecutor extends AbstractActor {
                 e.printStackTrace();
             }
             Invocable invocable = (Invocable) engine;
+            invocable.
             String res = invocable.invokeFunction(functionName, params).toString();
             PackageDecoded packageDecoded = receivedMSG.getValue();
             packageDecoded.wrightResult(receivedMSG.getKey(), res);
