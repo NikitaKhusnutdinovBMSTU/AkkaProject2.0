@@ -33,4 +33,8 @@ public class PackageDecoded {
     public TestDecoded[] getTests(){
         return tests;
     }
+
+    public TestDecoded getTest(int i){
+        return tests[i];
+    }
 }

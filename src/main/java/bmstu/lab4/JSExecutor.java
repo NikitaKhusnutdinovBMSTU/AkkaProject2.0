@@ -4,6 +4,9 @@ import akka.actor.AbstractActor;
 import akka.japi.pf.ReceiveBuilder;
 import javafx.util.Pair;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+
 public class JSExecutor extends AbstractActor {
 
     @Override
@@ -11,7 +14,8 @@ public class JSExecutor extends AbstractActor {
 
         return ReceiveBuilder.create().match(ExecuteMSG.class, m -> {
             Pair<Integer, PackageDecoded> receivedMSG = m.getMsg();
-            
+            ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
+            String jsScript = receivedMSG.getValue().getTest(receivedMSG.getKey());
         }).build();
     }
 }

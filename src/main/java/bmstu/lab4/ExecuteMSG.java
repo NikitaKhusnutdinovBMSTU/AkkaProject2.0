@@ -8,10 +8,10 @@ public class ExecuteMSG {
 
 
     public ExecuteMSG(int a, PackageDecoded packageDecoded){
-        msg = new Pair<>(a, packageDecoded);
+        this.msg = new Pair<>(a, packageDecoded);
     }
 
     public Pair<Integer, PackageDecoded> getMsg(){
-        return msg;
+        return this.msg;
     }
 }
