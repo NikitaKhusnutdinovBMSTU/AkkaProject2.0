@@ -17,7 +17,6 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 import java.util.concurrent.CompletionStage;
 import scala.concurrent.Future;
-import static akka.http.javadsl.unmarshalling.StringUnmarshallers.INTEGER;
 
 public class JSAkkaTester extends AllDirectives{
 
