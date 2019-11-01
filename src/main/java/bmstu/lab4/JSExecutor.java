@@ -10,6 +10,7 @@ public class JSExecutor extends AbstractActor {
     public Receive createReceive() {
 
         return ReceiveBuilder.create().match(ExecuteMSG.class, m -> {
+            Pair<Integer, PackageDecoded> receivedMSG = m.getMsg();
 
         }).build();
     }
