@@ -27,4 +27,11 @@ public class TestDecoded {
         this.result = res;
     }
 
+    public String getResult(){
+        return result;
+    }
+
+    public String getTestName(){
+        return testName;
+    }
 }
