@@ -15,7 +15,10 @@ public class JSExecutor extends AbstractActor {
         return ReceiveBuilder.create().match(ExecuteMSG.class, m -> {
             Pair<Integer, PackageDecoded> receivedMSG = m.getMsg();
             ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-            String jsScript = receivedMSG.getValue().getTest(receivedMSG.getKey());
+            String jsScript = receivedMSG.getValue().getJSScript();
+            try{
+                
+            }
         }).build();
     }
 }

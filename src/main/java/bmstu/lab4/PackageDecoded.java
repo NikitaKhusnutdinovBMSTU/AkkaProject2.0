@@ -20,7 +20,9 @@ public class PackageDecoded {
         this.tests = tests;
     }
 
-
+    public String getJSScript(){
+        return jsScript;
+    }
 
     public int getPackageId(){
         return packageId;
