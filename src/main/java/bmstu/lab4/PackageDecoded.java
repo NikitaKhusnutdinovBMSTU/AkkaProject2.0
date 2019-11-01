@@ -11,7 +11,7 @@ public class PackageDecoded {
 
     @JsonCreator
     public PackageDecoded(@JsonProperty("packageId") String packageId,
-                          @JsonProperty("jsSript") String jsScript,
+                          @JsonProperty("jsScript") String jsScript,
                           @JsonProperty("functionName") String functionName,
                           @JsonProperty("tests") TestDecoded[] tests){
         this.packageId = Integer.parseInt(packageId);

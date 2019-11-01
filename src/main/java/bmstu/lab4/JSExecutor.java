@@ -28,6 +28,9 @@ public class JSExecutor extends AbstractActor {
             }
             Invocable invocable = (Invocable) engine;
             String res = invocable.invokeFunction(functionName, params).toString();
+
+            PackageDecoded packageDecoded = receivedMSG.getValue();
+            packageDecoded.getTest(0).setResult(res);
             sender().tell(res, ActorRef.noSender());
         }).build();
     }
