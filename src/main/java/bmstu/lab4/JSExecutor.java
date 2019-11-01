@@ -6,6 +6,7 @@ import javafx.util.Pair;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
 public class JSExecutor extends AbstractActor {
 
@@ -17,7 +18,9 @@ public class JSExecutor extends AbstractActor {
             ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
             String jsScript = receivedMSG.getValue().getJSScript();
             try{
-                
+                engine.eval(jsScript);
+            } catch( ScriptException e){
+                e.printStackTrace();
             }
         }).build();
     }
