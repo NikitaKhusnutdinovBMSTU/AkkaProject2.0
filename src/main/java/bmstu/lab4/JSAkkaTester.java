@@ -46,7 +46,7 @@ public class JSAkkaTester extends AllDirectives{
 
     private Route jsTesterRoute(){
 
-        return route(
+        return concat(
                 get(
                         () -> parameter("packageId", (packageId) ->
                             {
