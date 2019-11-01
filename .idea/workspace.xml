@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3f830f9-523f-47dd-b7e2-ec84b6c27267" name="Default Changelist" comment="" />
+    <list default="true" id="b3f830f9-523f-47dd-b7e2-ec84b6c27267" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/lab4/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/lab4/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/lab4/PackageDecoded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/lab4/PackageDecoded.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,13 +36,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="1726" />
+          <entry key="java" value="1830" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1726" />
+          <entry key="JAVA" value="1830" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="3" />
         </counts>
@@ -57,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/JSAkkaTester.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
@@ -95,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/Manager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+            <state relative-caret-position="297">
+              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,14 +125,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/PackageDecoded.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="291">
+              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#989#990#0" expanded="true" />
                 <element signature="e#1021#1022#0" expanded="true" />
                 <element signature="e#889#890#0" expanded="true" />
                 <element signature="e#924#925#0" expanded="true" />
+                <element signature="e#955#956#0" expanded="true" />
+                <element signature="e#983#984#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,8 +160,8 @@
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/JSExecutor.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/JSAkkaTester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/PackageDecoded.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/TestsDecoded.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/PackageDecoded.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/Manager.java" />
       </list>
     </option>
@@ -241,7 +246,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572632039083" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572632196762" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -323,15 +328,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572625972528</updated>
-      <workItem from="1572625979489" duration="5589000" />
+      <workItem from="1572625979489" duration="5829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5589000" />
+    <option name="totallyTimeSpent" value="5829000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="305" width="1280" height="676" extended-state="0" />
+    <frame x="275" y="100" width="1280" height="676" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -410,34 +415,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/JSAkkaTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/PackageDecoded.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="291">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#989#990#0" expanded="true" />
             <element signature="e#1021#1022#0" expanded="true" />
             <element signature="e#889#890#0" expanded="true" />
             <element signature="e#924#925#0" expanded="true" />
+            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/JSAkkaTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+        <state relative-caret-position="297">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

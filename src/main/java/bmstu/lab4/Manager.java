@@ -19,8 +19,10 @@ public class Manager extends AbstractActor {
     @Override
     public Receive createReceive() {
 
-        return receiveBuilder().match(PackageDecoded.class, tests -> {
+        return receiveBuilder().match(PackageDecoded.class, pack -> {
+            for(x : pack.getTests())
 
+            }
         });
     }
 }

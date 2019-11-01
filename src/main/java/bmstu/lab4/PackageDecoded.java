@@ -28,4 +28,8 @@ public class PackageDecoded {
     public String getFunctionName(){
         return functionName;
     }
+
+    public TestsDecoded[] getTests(){
+        return tests;
+    }
 }
