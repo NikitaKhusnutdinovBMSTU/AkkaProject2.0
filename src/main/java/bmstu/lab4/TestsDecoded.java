@@ -16,4 +16,5 @@ public class TestsDecoded {
         this.expectedResult = Float.parseFloat(expectedResult);
         this.params = params;
     }
+
 }
