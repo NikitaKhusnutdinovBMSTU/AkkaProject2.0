@@ -17,7 +17,7 @@ public class Storage extends AbstractActor {
                 req -> getSender().tell(data.get(req.getPackageId()),
                         ActorRef.noSender()))
                 .match(PackageDecoded.class, msg -> {
-                    System.out.println("MSG->" + msg.getFunctionName());
+                    System.out.println("MSG->" + msg);
                     data.add(msg);
                 })
                 .build();
