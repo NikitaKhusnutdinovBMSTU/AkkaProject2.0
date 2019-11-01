@@ -1,4 +1,11 @@
 package bmstu.lab4;
 
-public class JSExecutor {
+import akka.actor.AbstractActor;
+
+public class JSExecutor extends AbstractActor {
+
+    @Override
+    public Receive createReceive() {
+        return null;
+    }
 }

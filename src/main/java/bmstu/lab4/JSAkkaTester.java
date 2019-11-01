@@ -16,10 +16,7 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 import java.util.concurrent.CompletionStage;
 import scala.concurrent.Future;
-
-
-import static akka.http.javadsl.server.Directives.*;
-import static akka.http.javadsl.unmarshalling.StringUnmarshallers.INTEGER
+import static akka.http.javadsl.unmarshalling.StringUnmarshallers.INTEGER;
 
 public class JSAkkaTester extends AllDirectives{
 
@@ -34,8 +31,13 @@ public class JSAkkaTester extends AllDirectives{
         JSAkkaTester app = new JSAkkaTester();
 
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = app.jsTesterRoute().flow(system, materializer);
-        final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow, ConnectHttp.toHost("localhost", 8080), materializer);
-        System.out.println("Server online on localhost:8080/");
+        final CompletionStage<ServerBinding> binding = http.bindAndHandle(
+                routeFlow,
+                ConnectHttp.toHost("localhost", 8080),
+                materializer
+        );
+
+        System.out.println("Server online on localhost:8080/\n PRESS ANY KEY TO STOP");
         System.in.read();
 
         binding
@@ -56,13 +58,11 @@ public class JSAkkaTester extends AllDirectives{
                         )
                 ),
                 post(
-                        () -> {
-                            return entity(Jackson.unmarshaller(PackageDecoded.class),
-                                    msg -> {
-                                        mainActor.tell(msg, ActorRef.noSender());
-                                        return complete("");
-                                    });
-                        }));
+                        () -> entity(Jackson.unmarshaller(PackageDecoded.class),
+                                msg -> {
+                                    mainActor.tell(msg, ActorRef.noSender());
+                                    return complete("");
+                                })));
     }
 
 }
