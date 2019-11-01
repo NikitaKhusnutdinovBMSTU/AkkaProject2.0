@@ -5,6 +5,7 @@ import akka.actor.ActorRef;
 import akka.actor.Props;
 import akka.japi.pf.ReceiveBuilder;
 import akka.routing.RoundRobinPool;
+import javafx.util.Pair;
 
 public class Manager extends AbstractActor {
 
@@ -20,9 +21,9 @@ public class Manager extends AbstractActor {
     public Receive createReceive() {
 
         return ReceiveBuilder.create().match(PackageDecoded.class, pack -> {
-            for(TestDecoded test : pack.getTests()){
-
-                executors.tell(Pair<String, String>, storage);
+            int len = pack.getTests().length;
+            for(int i = 0; i < len; i++){
+                executors.tell(new Pair<>(i, pack), storage);
             }
         }).build();
     }
