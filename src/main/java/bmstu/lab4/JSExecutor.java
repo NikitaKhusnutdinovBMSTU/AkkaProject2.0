@@ -30,8 +30,8 @@ public class JSExecutor extends AbstractActor {
             String res = invocable.invokeFunction(functionName, params).toString();
 
             PackageDecoded packageDecoded = receivedMSG.getValue();
-            packageDecoded.getTest(0).setResult(res);
-            getSender().tell(res, ActorRef.noSender());
+            packageDecoded.wrightResult(receivedMSG.getKey(), res);
+            getSender().tell(packageDecoded, ActorRef.noSender());
         }).build();
     }
 }

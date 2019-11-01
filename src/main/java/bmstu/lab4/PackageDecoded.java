@@ -39,4 +39,8 @@ public class PackageDecoded {
     public TestDecoded getTest(int i){
         return tests[i];
     }
+
+    public void wrightResult(int i, String result){
+        tests[i].setResult(result);
+    }
 }
