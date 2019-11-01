@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 
 public class Storage extends AbstractActor {
-    private ArrayList<PackageDecoded> data;
+    private ArrayList<PackageDecoded> data = new ArrayList<>();
 
     @Override
     public Receive createReceive() {
