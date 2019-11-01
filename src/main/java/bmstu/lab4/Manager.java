@@ -22,6 +22,7 @@ public class Manager extends AbstractActor {
 
         return ReceiveBuilder.create().match(PackageDecoded.class, pack -> {
             int len = pack.getTests().length;
+            System.out.println("PACK->" + pack.getFunctionName());
             for(int i = 0; i < len; i++){
                 executors.tell(new ExecuteMSG(i, pack), storage);
             }
