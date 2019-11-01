@@ -20,12 +20,14 @@ public class Manager extends AbstractActor {
     @Override
     public Receive createReceive() {
 
-        return ReceiveBuilder.create().match(PackageDecoded.class, pack -> {
-            int len = pack.getTests().length;
-            //System.out.println("PACK->" + pack.getFunctionName());
-            for(int i = 0; i < len; i++){
-                executors.tell(new ExecuteMSG(i, pack), storage);
-            }
-        }).match(GetMessage.class, req -> storage.tell(req, sender())).build();
+        return ReceiveBuilder.create().match(
+                PackageDecoded.class, pack -> {
+                int len = pack.getTests().length;
+                //System.out.println("PACK->" + pack.getFunctionName());
+                for(int i = 0; i < len; i++){
+                    executors.tell(new ExecuteMSG(i, pack), storage);
+                }
+                })
+                .match(GetMessage.class, req -> storage.tell(req, sender())).build();
     }
 }
