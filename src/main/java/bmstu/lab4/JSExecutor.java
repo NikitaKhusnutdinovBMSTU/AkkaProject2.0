@@ -31,7 +31,7 @@ public class JSExecutor extends AbstractActor {
 
             PackageDecoded packageDecoded = receivedMSG.getValue();
             packageDecoded.wrightResult(receivedMSG.getKey(), res);
-            getSender().tell(packageDecoded, );
+            getSender().tell(packageDecoded, ActorRef.noSender());
         }).build();
     }
 }
