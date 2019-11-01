@@ -18,7 +18,7 @@ public class Manager extends AbstractActor {
 
     @Override
     public Receive createReceive() {
-        PackageDecoded receivedMsg = new PackageDecoded();
+        
         return null;
     }
 }
