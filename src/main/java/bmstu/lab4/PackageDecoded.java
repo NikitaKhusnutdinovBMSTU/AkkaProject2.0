@@ -20,6 +20,10 @@ public class PackageDecoded {
         this.tests = tests;
     }
 
+    public setOneTest(TestDecoded test){
+        this.tests = test;
+    }
+
 
     public int getPackageId(){
         return packageId;

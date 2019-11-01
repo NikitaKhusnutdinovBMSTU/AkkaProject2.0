@@ -21,7 +21,8 @@ public class Manager extends AbstractActor {
 
         return ReceiveBuilder.create().match(PackageDecoded.class, pack -> {
             for(TestDecoded test : pack.getTests()){
-                executors.tell(test, storage);
+
+                executors.tell(Pair<String, String>, storage);
             }
         }).build();
     }
