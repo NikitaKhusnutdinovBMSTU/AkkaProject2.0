@@ -5,18 +5,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TestDecoded {
     private final String testName;
-    private final float expectedResult;
+    private final String expectedResult;
     private final Object[] params;
     private String result;
+    private String checker;
 
     @JsonCreator
     public TestDecoded(@JsonProperty("testName") String testname,
                        @JsonProperty("expectedResult") String expectedResult,
                        @JsonProperty("params") Object[] params){
         this.testName = testname;
-        this.expectedResult = Float.parseFloat(expectedResult);
+        this.expectedResult = expectedResult;
         this.params = params;
         this.result = "NONE";
+        this.checker = "NOT READY YET";
     }
 
     public Object[] getParams(){
@@ -34,4 +36,17 @@ public class TestDecoded {
     public String getTestName(){
         return testName;
     }
+
+    public String getExpectedResult(){
+        return expectedResult;
+    }
+
+    private void checkResults(){
+        if(result.equals(expectedResult)){
+            this.checker = "CORRECT ANSWER!";
+        }else{
+            this.checker = "WRONG ANSWER!";
+        }
+    }
+
 }
