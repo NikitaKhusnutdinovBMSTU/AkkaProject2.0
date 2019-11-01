@@ -7,7 +7,7 @@ public class TestDecoded {
     private final String testName;
     private final float expectedResult;
     private final int[] params;
-    private final String result;
+    private String result;
 
     @JsonCreator
     public TestDecoded(@JsonProperty("testName") String testname,
@@ -21,6 +21,10 @@ public class TestDecoded {
 
     public int[] getParams(){
         return params;
+    }
+
+    public void setResult(String res){
+        this.result = res;
     }
 
 }
