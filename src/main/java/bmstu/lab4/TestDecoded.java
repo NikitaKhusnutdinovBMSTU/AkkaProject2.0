@@ -42,6 +42,10 @@ public class TestDecoded {
         return expectedResult;
     }
 
+    public String getChecker(){
+        return checker;
+    }
+
     private void checkResults(){
         if(result.equals(expectedResult)){
             this.checker = "CORRECT ANSWER!";
