@@ -9,11 +9,11 @@ import java.util.Map;
 import java.util.Set;
 
 public class Storage extends AbstractActor {
-    private Set<PackageDecoded> data;
+    private ;
 
     @Override
     public Receive createReceive() {
 
-        return ReceiveBuilder.create().match(GetMessage.class, req -> sender().tell());
+        return ReceiveBuilder.create().match(GetMessage.class, req -> sender().tell(data));
     }
 }
