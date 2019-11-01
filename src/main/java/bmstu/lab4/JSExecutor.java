@@ -20,7 +20,7 @@ public class JSExecutor extends AbstractActor {
             ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
             String jsScript = receivedMSG.getValue().getJSScript();
             String functionName = receivedMSG.getValue().getFunctionName();
-            int[] params = receivedMSG.getValue().getTest(receivedMSG.getKey()).getParams();
+            Object[] params = receivedMSG.getValue().getTest(receivedMSG.getKey()).getParams();
             try{
                 engine.eval(jsScript);
             } catch( ScriptException e){
