@@ -22,6 +22,8 @@ public class JSExecutor extends AbstractActor {
             } catch( ScriptException e){
                 e.printStackTrace();
             }
+
+            String res = invocable.invokeFunction(functionName, params).toString();
         }).build();
     }
 }
