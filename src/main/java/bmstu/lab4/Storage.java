@@ -17,8 +17,17 @@ public class Storage extends AbstractActor {
                 GetMessage.class,
                 req -> getSender().tell(data.get(req.getPackageId()),
                         ActorRef.noSender()))
-                .match(StorageMessage.class, msg ->
-                        data.put(msg, msg)
+                .match(StorageCommand.class, msg ->{
+                    if(data.containsKey(msg.getPackageID())) {
+                        ArrayList<StorageMessage> localData = data.get(msg.getPackageID());
+                        localData.add(msg.getStorageMessage());
+                        data.put(msg.getPackageID(), localData);
+                    }else{
+                        ArrayList<StorageMessage> initList = new ArrayList<>();
+                        initList.add(msg.getStorageMessage());
+                        data.put(msg.getPackageID(), initList);
+                    }
+                }
                 )
                 .build();
     }
