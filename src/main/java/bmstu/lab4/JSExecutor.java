@@ -63,7 +63,7 @@ public class JSExecutor extends AbstractActor {
         }
         Invocable invocable = (Invocable) engine;
         Object params[] = receivedPD.getTest(taskIdx).getParams();
-        res = invocable.invokeFunction(functionName, 1,2).toString();
+        res = invocable.invokeFunction(functionName).toString();
         receivedPD.wrightResult(taskIdx, res);
     }
 
