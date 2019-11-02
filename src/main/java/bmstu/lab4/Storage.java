@@ -15,7 +15,8 @@ public class Storage extends AbstractActor {
 
         return ReceiveBuilder.create().match(
                 GetMessage.class,
-                req -> getSender().tell(data.get(req.getPackageId()),
+                req -> getSender().tell(
+                        data.get(req.getPackageId()),
                         ActorRef.noSender()))
                 .match(StorageCommand.class, msg ->{
                     if(data.containsKey(msg.getPackageID())) {
