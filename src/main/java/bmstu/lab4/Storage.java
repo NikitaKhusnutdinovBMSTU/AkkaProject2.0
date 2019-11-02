@@ -3,12 +3,12 @@ package bmstu.lab4;
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
-
+import java.util.ArrayList;
 import java.util.HashMap;
 
 
 public class Storage extends AbstractActor {
-    private HashMap<Integer, PackageDecoded> data = new HashMap<>();
+    private HashMap<Integer, ArrayList<StorageMessage>> data = new HashMap<>();
 
     @Override
     public Receive createReceive() {
@@ -17,8 +17,8 @@ public class Storage extends AbstractActor {
                 GetMessage.class,
                 req -> getSender().tell(data.get(req.getPackageId()),
                         ActorRef.noSender()))
-                .match(PackageDecoded.class, msg ->
-                        data.put(msg.getPackageId(), msg)
+                .match(StorageMessage.class, msg ->
+                        data.put(msg, msg)
                 )
                 .build();
     }
