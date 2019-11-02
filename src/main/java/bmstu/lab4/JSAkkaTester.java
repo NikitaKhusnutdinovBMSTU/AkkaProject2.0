@@ -15,17 +15,19 @@ import akka.http.javadsl.server.Route;
 import akka.pattern.Patterns;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
+
 import java.util.concurrent.CompletionStage;
+
 import scala.concurrent.Future;
 
-public class JSAkkaTester extends AllDirectives{
+public class JSAkkaTester extends AllDirectives {
 
-    static ActorRef manager;
+    static ActorRef mainActor;
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         ActorSystem system = ActorSystem.create("routes");
-        manager = system.actorOf(Props.create(Manager.class));
+        mainActor = system.actorOf(Props.create(MainActor.class));
 
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
@@ -48,23 +50,23 @@ public class JSAkkaTester extends AllDirectives{
 
     }
 
-    private Route jsTesterRoute(){
+    private Route jsTesterRoute() {
 
         return concat(
                 get(
                         () -> parameter("packageId", (packageId) ->
-                            {
-                                Future<Object> result = Patterns.ask(manager,
-                                        new GetMessage(Integer.parseInt(packageId)),
-                                        5000);
-                                return completeOKWithFuture(result, Jackson.marshaller());
-                            }
+                                {
+                                    Future<Object> result = Patterns.ask(mainActor,
+                                            new GetMessage(Integer.parseInt(packageId)),
+                                            5000);
+                                    return completeOKWithFuture(result, Jackson.marshaller());
+                                }
                         )
                 ),
                 post(
                         () -> entity(Jackson.unmarshaller(PackageDecoded.class),
                                 msg -> {
-                                    manager.tell(msg, ActorRef.noSender());
+                                    mainActor.tell(msg, ActorRef.noSender());
                                     return complete("Message was posted");
                                 })));
     }

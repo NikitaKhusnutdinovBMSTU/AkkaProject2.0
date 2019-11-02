@@ -47,7 +47,7 @@ public class TestDecoded {
     }
 
     private void checkResults(){
-        if(result.equals(expectedResult)){
+        if(result.toLowerCase().equals(expectedResult.toLowerCase())){
             this.checker = "CORRECT ANSWER!";
         }else{
             this.checker = "WRONG ANSWER!";

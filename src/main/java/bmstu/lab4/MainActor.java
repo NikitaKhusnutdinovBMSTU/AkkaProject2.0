@@ -6,12 +6,12 @@ import akka.actor.Props;
 import akka.japi.pf.ReceiveBuilder;
 import akka.routing.RoundRobinPool;
 
-public class Manager extends AbstractActor {
+public class MainActor extends AbstractActor {
 
     private final ActorRef executors;
     private final ActorRef storage;
 
-    public Manager(){
+    public MainActor() {
         executors = getContext().actorOf(new RoundRobinPool(5).props(Props.create(JSExecutor.class)));
         storage = getContext().actorOf(Props.create(Storage.class));
     }
@@ -21,11 +21,10 @@ public class Manager extends AbstractActor {
 
         return ReceiveBuilder.create().match(
                 PackageDecoded.class, pack -> {
-                int len = pack.getTests().length;
-                //System.out.println("PACK->" + pack.getFunctionName());
-                for(int i = 0; i < len; i++){
-                    executors.tell(new ExecuteMSG(i, pack), storage);
-                }
+                    int len = pack.getTests().length;
+                    for (int i = 0; i < len; i++) {
+                        executors.tell(new ExecuteMSG(i, pack), storage);
+                    }
                 })
                 .match(GetMessage.class, req -> storage.tell(req, sender())).build();
     }

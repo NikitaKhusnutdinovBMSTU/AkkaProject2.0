@@ -13,34 +13,34 @@ public class PackageDecoded {
     public PackageDecoded(@JsonProperty("packageId") String packageId,
                           @JsonProperty("jsScript") String jsScript,
                           @JsonProperty("functionName") String functionName,
-                          @JsonProperty("tests") TestDecoded[] tests){
+                          @JsonProperty("tests") TestDecoded[] tests) {
         this.packageId = Integer.parseInt(packageId);
         this.jsScript = jsScript;
         this.functionName = functionName;
         this.tests = tests;
     }
 
-    public String getJSScript(){
+    public String getJSScript() {
         return jsScript;
     }
 
-    public int getPackageId(){
+    public int getPackageId() {
         return packageId;
     }
 
-    public String getFunctionName(){
+    public String getFunctionName() {
         return functionName;
     }
 
-    public TestDecoded[] getTests(){
+    public TestDecoded[] getTests() {
         return tests;
     }
 
-    public TestDecoded getTest(int i){
+    public TestDecoded getTest(int i) {
         return tests[i];
     }
 
-    public void wrightResult(int i, String result){
+    public void wrightResult(int i, String result) {
         tests[i].setResult(result);
     }
 }

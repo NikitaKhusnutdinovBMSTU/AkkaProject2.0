@@ -3,6 +3,7 @@ package bmstu.lab4;
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
+
 import java.util.HashMap;
 
 
@@ -17,7 +18,7 @@ public class Storage extends AbstractActor {
                 req -> getSender().tell(data.get(req.getPackageId()),
                         ActorRef.noSender()))
                 .match(PackageDecoded.class, msg ->
-                    data.put(msg.getPackageId(), msg)
+                        data.put(msg.getPackageId(), msg)
                 )
                 .build();
     }
