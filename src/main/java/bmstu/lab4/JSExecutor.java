@@ -12,9 +12,11 @@ import javax.script.ScriptException;
 
 public class JSExecutor extends AbstractActor {
 
-    private int taskIdx;
-    private PackageDecoded receivedPD;
-    private String jsScript;
+//    private int taskIdx;
+//    private PackageDecoded receivedPD;
+//    private String jsScript;
+//    private String functionName;
+//    private String res;
 
 
 
@@ -22,33 +24,45 @@ public class JSExecutor extends AbstractActor {
     public Receive createReceive() {
 
         return ReceiveBuilder.create().match(ExecuteMSG.class, m -> {
-//            initialisePair(m.getMsg());
-//            Pair<Integer, PackageDecoded> receivedMSG = m.getMsg();
-//            ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-//            String jsScript = receivedMSG.getValue().getJSScript();
-//            String functionName = receivedMSG.getValue().getFunctionName();
-//            Object[] params = receivedMSG.getValue().getTest(receivedMSG.getKey()).getParams();
-//            try{
-//                engine.eval(jsScript);
-//            } catch( ScriptException e){
-//                e.printStackTrace();
-//            }
-//            Invocable invocable = (Invocable) engine;
-//
-//            System.out.println("functionName->" + functionName + "params->");
-//            String res = invocable.invokeFunction(functionName, params).toString();
-//            PackageDecoded packageDecoded = receivedMSG.getValue();
-//            packageDecoded.wrightResult(receivedMSG.getKey(), res);
+            //initialisePair(m.getMsg());
+            Pair<Integer, PackageDecoded> receivedMSG = m.getMsg();
+            ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
+            String jsScript = receivedMSG.getValue().getJSScript();
+            String functionName = receivedMSG.getValue().getFunctionName();
+            Object[] params = receivedMSG.getValue().getTest(receivedMSG.getKey()).getParams();
+            try{
+                engine.eval(jsScript);
+            } catch( ScriptException e){
+                e.printStackTrace();
+            }
+            Invocable invocable = (Invocable) engine;
+
+            System.out.println("functionName->" + functionName + "params->");
+            String res = invocable.invokeFunction(functionName, params).toString();
+            PackageDecoded packageDecoded = receivedMSG.getValue();
+            packageDecoded.wrightResult(receivedMSG.getKey(), res);
             getSender().tell(packageDecoded, ActorRef.noSender());
         }).build();
     }
 
-    private void initialisePair(Pair<Integer, PackageDecoded> msg){
-
-    }
-
-    private void runScript(){
-
-    }
+//    private void initialisePair(Pair<Integer, PackageDecoded> msg){
+//        receivedPD = msg.getValue();
+//        taskIdx = msg.getKey();
+//        jsScript = receivedPD.getJSScript();
+//        functionName = receivedPD.getFunctionName();
+//    }
+//
+//    private void runScript(){
+//        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
+//        try{
+//            engine.eval(jsScript);
+//        } catch( ScriptException e){
+//            e.printStackTrace();
+//        }
+//        Invocable invocable = (Invocable) engine;
+//        Object params[] = receivedPD.getTest(taskIdx).getParams();
+//        res = invocable.invokeFunction(functionName, params).toString();
+//        receivedPD.wrightResult(taskIdx, res);
+//    }
 
 }
