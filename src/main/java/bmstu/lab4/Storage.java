@@ -33,6 +33,7 @@ public class Storage extends AbstractActor {
                         ArrayList<StorageMessage> initList = new ArrayList<>();
                         initList.add(msg.getStorageMessage());
                         data.put(msg.getPackageID(), initList);
+                        System.out.println(data.get(11));
                     }
                 }
                 )
