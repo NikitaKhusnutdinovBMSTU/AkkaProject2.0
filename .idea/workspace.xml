@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3f830f9-523f-47dd-b7e2-ec84b6c27267" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java" afterDir="false" />
-    </list>
+    <list default="true" id="b3f830f9-523f-47dd-b7e2-ec84b6c27267" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+            <state relative-caret-position="144">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -319,7 +317,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572685654336" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572685687078" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -401,12 +399,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572625972528</updated>
-      <workItem from="1572625979489" duration="29103000" />
+      <workItem from="1572625979489" duration="29362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29103000" />
+    <option name="totallyTimeSpent" value="29362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="23" width="1200" height="727" extended-state="0" />
@@ -629,8 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+        <state relative-caret-position="144">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
