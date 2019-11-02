@@ -17,10 +17,11 @@ public class Storage extends AbstractActor {
         return ReceiveBuilder.create().match(
                 GetMessage.class,
                 req -> {
-                    System.out.println(req);
+                    System.out.println(req.getPackageId());
                     getSender().tell(
                         data.get(req.getPackageId()).toArray(),
-                        ActorRef.noSender());
+                        ActorRef.noSender()
+                    );
                 })
 
                 .match(StorageCommand.class, msg ->{
