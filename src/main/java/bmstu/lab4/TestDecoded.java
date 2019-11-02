@@ -53,5 +53,4 @@ public class TestDecoded {
             this.checker = "WRONG ANSWER!";
         }
     }
-
 }

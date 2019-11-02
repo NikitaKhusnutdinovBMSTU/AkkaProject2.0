@@ -35,6 +35,8 @@ public class JSExecutor extends AbstractActor {
             String res = invocable.invokeFunction(functionName, params).toString();
             PackageDecoded packageDecoded = receivedMSG.getValue();
             packageDecoded.wrightResult(receivedMSG.getKey(), res);
+            TestDecoded curTest = receivedMSG.getValue().getTest(receivedMSG.getKey());
+            StorageMessage sMsg = new StorageMessage(receivedMSG.getKey(), curTest.getResult());
             getSender().tell(packageDecoded, ActorRef.noSender());
         }).build();
     }
