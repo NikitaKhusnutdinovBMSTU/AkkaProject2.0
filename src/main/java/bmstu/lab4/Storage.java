@@ -2,6 +2,7 @@ package bmstu.lab4;
 
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
+import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.japi.pf.ReceiveBuilder;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,7 +19,7 @@ public class Storage extends AbstractActor {
                 req -> {
                     System.out.println(req);
                     getSender().tell(
-                        data.get(req.getPackageId()),
+                        data.get(req.getPackageId()).toArray(),
                         ActorRef.noSender());
                 })
 

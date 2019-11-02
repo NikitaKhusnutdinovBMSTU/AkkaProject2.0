@@ -4,8 +4,6 @@ import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
 import javafx.util.Pair;
-
-//import javax.script.Invocable;
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -30,11 +28,9 @@ public class JSExecutor extends AbstractActor {
                 e.printStackTrace();
             }
             Invocable invocable = (Invocable) engine;
-
-            System.out.println("functionName->" + functionName + "params->");
             String res = invocable.invokeFunction(functionName, params).toString();
-            PackageDecoded packageDecoded = receivedMSG.getValue();
-            packageDecoded.wrightResult(receivedMSG.getKey(), res);
+            //PackageDecoded packageDecoded = receivedMSG.getValue();
+            //packageDecoded.wrightResult(receivedMSG.getKey(), res);
             TestDecoded curTest = receivedMSG.getValue().getTest(receivedMSG.getKey());
             StorageMessage sMsg = new StorageMessage(
                     res,
