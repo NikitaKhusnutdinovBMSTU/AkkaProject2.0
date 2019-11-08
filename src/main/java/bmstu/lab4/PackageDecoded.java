@@ -40,7 +40,7 @@ public class PackageDecoded {
         return tests[i];
     }
 
-    public void wrightResult(int i, String result) {
-        tests[i].setResult(result);
-    }
+//    //public void wrightResult(int i, String result) {
+//        tests[i].setResult(result);
+//    }
 }
