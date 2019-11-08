@@ -20,14 +20,22 @@ import java.util.concurrent.CompletionStage;
 
 import scala.concurrent.Future;
 
+
+//++
 public class JSAkkaTester extends AllDirectives {
 
     static ActorRef mainActor;
-    private static final String
+    private static final String ROUTES = "routes";
+    private static final String LOCALHOST = "localhost";
+    private static final String SERVER_INFO = "Server online on localhost:8080/\n PRESS ANY KEY TO STOP";
+    private static final String PACKAGE_ID = "packageId";
+    private static final String POST_MESSAGE = "Message was posted";
+    private static final int SERVER_PORT = 8080;
+    private static final int TIMEOUT_MILLIS = 5000;
 
     public static void main(String[] args) throws Exception {
 
-        ActorSystem system = ActorSystem.create("routes");
+        ActorSystem system = ActorSystem.create(ROUTES);
         mainActor = system.actorOf(Props.create(MainActor.class));
 
         final Http http = Http.get(system);
@@ -38,11 +46,11 @@ public class JSAkkaTester extends AllDirectives {
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = app.jsTesterRoute().flow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
-                ConnectHttp.toHost("localhost", 8080),
+                ConnectHttp.toHost(LOCALHOST, SERVER_PORT),
                 materializer
         );
 
-        System.out.println("Server online on localhost:8080/\n PRESS ANY KEY TO STOP");
+        System.out.println(SERVER_INFO);
         System.in.read();
 
         binding
@@ -55,11 +63,11 @@ public class JSAkkaTester extends AllDirectives {
 
         return concat(
                 get(
-                        () -> parameter("packageId", (packageId) ->
+                        () -> parameter(PACKAGE_ID, (packageId) ->
                                 {
                                     Future<Object> result = Patterns.ask(mainActor,
                                             new GetMessage(Integer.parseInt(packageId)),
-                                            5000);
+                                            TIMEOUT_MILLIS);
                                     return completeOKWithFuture(result, Jackson.marshaller());
                                 }
                         )
@@ -68,7 +76,7 @@ public class JSAkkaTester extends AllDirectives {
                         () -> entity(Jackson.unmarshaller(PackageDecoded.class),
                                 msg -> {
                                     mainActor.tell(msg, ActorRef.noSender());
-                                    return complete("Message was posted");
+                                    return complete(POST_MESSAGE);
                                 })));
     }
 

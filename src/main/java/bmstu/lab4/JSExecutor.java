@@ -9,9 +9,11 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
-// +
+// ++
 public class JSExecutor extends AbstractActor {
     private static final String JS_ENGINE = "nashorn";
+    private static final String WRONG_ANSWER = "WRONG ANSWER!";
+    private static final String CORRECT_ANSWER = "CORRECT ANSWER!";
 
     @Override
     public Receive createReceive() {
@@ -29,10 +31,10 @@ public class JSExecutor extends AbstractActor {
             }
             Invocable invocable = (Invocable) engine;
             String res = invocable.invokeFunction(packageDecoded.getFunctionName(), test.getParams()).toString();
-            String check = "WRONG ANSWER!";
+            String check = WRONG_ANSWER;
 
             if(res.equals(test.getExpectedResult())){
-                check = "CORRECT ANSWER!";
+                check = CORRECT_ANSWER;
             }
 
             StorageMessage storageMessage = new StorageMessage(
