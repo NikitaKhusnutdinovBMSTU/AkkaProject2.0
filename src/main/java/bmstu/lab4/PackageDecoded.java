@@ -13,13 +13,13 @@ public class PackageDecoded {
     private final int packageId;
     private final String jsScript;
     private final String functionName;
-    private final TestDecoded[] tests;
+    private final Test[] tests;
 
     @JsonCreator
     public PackageDecoded(@JsonProperty(PACKAGE_ID) String packageId,
                           @JsonProperty(JS_SCRIPT) String jsScript,
                           @JsonProperty(FUNCTION_NAME) String functionName,
-                          @JsonProperty(TESTS) TestDecoded[] tests) {
+                          @JsonProperty(TESTS) Test[] tests) {
         this.packageId = Integer.parseInt(packageId);
         this.jsScript = jsScript;
         this.functionName = functionName;
@@ -38,11 +38,11 @@ public class PackageDecoded {
         return functionName;
     }
 
-    public TestDecoded[] getTests() {
+    public Test[] getTests() {
         return tests;
     }
 
-    public TestDecoded getTest(int i) {
+    public Test getTest(int i) {
         return tests[i];
     }
 }

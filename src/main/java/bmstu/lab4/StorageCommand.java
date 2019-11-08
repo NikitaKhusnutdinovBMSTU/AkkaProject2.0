@@ -1,8 +1,6 @@
 package bmstu.lab4;
 
 
-//++
-
 public class StorageCommand {
     private final int packageID;
     private final StorageMessage storageMessage;

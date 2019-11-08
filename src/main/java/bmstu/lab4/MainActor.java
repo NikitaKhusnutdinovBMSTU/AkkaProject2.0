@@ -6,7 +6,7 @@ import akka.actor.Props;
 import akka.japi.pf.ReceiveBuilder;
 import akka.routing.RoundRobinPool;
 
-//++
+
 public class MainActor extends AbstractActor {
     private final static int NUM_ROUND_ROBIN_POOL = 5;
 
@@ -14,8 +14,8 @@ public class MainActor extends AbstractActor {
     private final ActorRef storage;
 
     public MainActor() {
-        executors = getContext().actorOf(new RoundRobinPool(NUM_ROUND_ROBIN_POOL).props(Props.create(JSExecutor.class)));
-        storage = getContext().actorOf(Props.create(Storage.class));
+        executors = getContext().actorOf(new RoundRobinPool(NUM_ROUND_ROBIN_POOL).props(Props.create(JSExecActor.class)));
+        storage = getContext().actorOf(Props.create(StorageActor.class));
     }
 
     @Override

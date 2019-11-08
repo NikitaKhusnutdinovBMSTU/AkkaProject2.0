@@ -10,7 +10,7 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 
-public class JSExecutor extends AbstractActor {
+public class JSExecActor extends AbstractActor {
     private static final String JS_ENGINE = "nashorn";
     private static final String WRONG_ANSWER = "WRONG ANSWER!";
     private static final String CORRECT_ANSWER = "CORRECT ANSWER!";
@@ -22,7 +22,7 @@ public class JSExecutor extends AbstractActor {
             Pair<Integer, PackageDecoded> msg = m.getMsg();
             int index = msg.getKey();
             PackageDecoded packageDecoded = msg.getValue();
-            TestDecoded test = packageDecoded.getTests()[index];
+            Test test = packageDecoded.getTests()[index];
             ScriptEngine engine = new ScriptEngineManager().getEngineByName(JS_ENGINE);
             try{
                 engine.eval(packageDecoded.getJSScript());

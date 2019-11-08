@@ -3,7 +3,7 @@ package bmstu.lab4;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TestDecoded {
+public class Test {
     private static final String TEST_NAME = "testName";
     private static final String EXPECTED_RESULT = "expectedResult";
     private static final String PARAMS = "params";
@@ -17,9 +17,9 @@ public class TestDecoded {
     private String checker;
 
     @JsonCreator
-    public TestDecoded(@JsonProperty(TEST_NAME) String testname,
-                       @JsonProperty(EXPECTED_RESULT) String expectedResult,
-                       @JsonProperty(PARAMS) Object[] params) {
+    public Test(@JsonProperty(TEST_NAME) String testname,
+                @JsonProperty(EXPECTED_RESULT) String expectedResult,
+                @JsonProperty(PARAMS) Object[] params) {
         this.testName = testname;
         this.expectedResult = expectedResult;
         this.params = params;

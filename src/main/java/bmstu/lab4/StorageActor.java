@@ -7,7 +7,7 @@ import akka.japi.pf.ReceiveBuilder;
 import java.util.*;
 
 //++
-public class Storage extends AbstractActor {
+public class StorageActor extends AbstractActor {
     private HashMap<Integer, ArrayList<StorageMessage>> data = new HashMap<>();
 
 
