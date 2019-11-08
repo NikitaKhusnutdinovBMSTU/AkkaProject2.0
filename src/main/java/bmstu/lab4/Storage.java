@@ -7,15 +7,16 @@ import akka.japi.pf.ReceiveBuilder;
 
 import java.util.*;
 
-
+//+
 public class Storage extends AbstractActor {
-    private Map<Integer, ArrayList<StorageMessage>> data = new HashMap<>();
+    private HashMap<Integer, ArrayList<StorageMessage>> data = new HashMap<>();
 
 
     @Override
     public Receive createReceive() {
 
-        return ReceiveBuilder.create().match(
+        return ReceiveBuilder.create()
+                .match(
                 GetMessage.class,
                 req ->
                     getSender().tell(
