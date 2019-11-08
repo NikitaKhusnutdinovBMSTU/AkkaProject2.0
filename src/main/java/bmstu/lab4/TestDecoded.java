@@ -40,5 +40,5 @@ public class TestDecoded {
     public String getChecker(){
         return checker;
     }
-    
+
 }

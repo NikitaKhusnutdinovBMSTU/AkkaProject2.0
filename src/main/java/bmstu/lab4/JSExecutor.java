@@ -29,10 +29,17 @@ public class JSExecutor extends AbstractActor {
             }
             Invocable invocable = (Invocable) engine;
             String res = invocable.invokeFunction(functionName, params).toString();
+            String checker;
             TestDecoded curTest = receivedMSG.getValue().getTest(receivedMSG.getKey());
+            if(res.toLowerCase().equals(curTest.getExpectedResult().toLowerCase())){
+                checker = "CORRECT ANSWER!";
+            }else{
+                checker = "WRONG ANSWER!";
+            }
             StorageMessage sMsg = new StorageMessage(
-                    curTest.getExpectedResult(),
                     res,
+                    curTest.getExpectedResult(),
+                    checker,
                     params,
                     curTest.getTestName()
             );
