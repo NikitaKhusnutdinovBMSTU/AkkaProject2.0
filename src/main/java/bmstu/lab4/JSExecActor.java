@@ -31,8 +31,8 @@ public class JSExecActor extends AbstractActor {
             }
             Invocable invocable = (Invocable) engine;
             String res = invocable.invokeFunction(functionPackage.getFunctionName(), test.getParams()).toString();
-            String check = WRONG_ANSWER;
 
+            String check = WRONG_ANSWER;
             if(res.equals(test.getExpectedResult())){
                 check = CORRECT_ANSWER;
             }

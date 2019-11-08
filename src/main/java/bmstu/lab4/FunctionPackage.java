@@ -3,7 +3,7 @@ package bmstu.lab4;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-//++
+
 public class FunctionPackage {
     private final static String PACKAGE_ID = "packageId";
     private final static String JS_SCRIPT = "jsScript";

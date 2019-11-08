@@ -3,10 +3,9 @@ package bmstu.lab4;
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
-
 import java.util.*;
 
-//++
+
 public class StorageActor extends AbstractActor {
     private HashMap<Integer, ArrayList<StorageMessage>> data = new HashMap<>();
 
