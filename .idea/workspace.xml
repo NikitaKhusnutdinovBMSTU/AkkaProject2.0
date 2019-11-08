@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3f830f9-523f-47dd-b7e2-ec84b6c27267" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/lab4/JSExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/lab4/JSExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/lab4/StorageMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/lab4/StorageMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bmstu/lab4/JSAkkaTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bmstu/lab4/JSAkkaTester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bmstu/lab4/JSExecutor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bmstu/lab4/JSExecutor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bmstu/lab4/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bmstu/lab4/Storage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bmstu/lab4/StorageMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bmstu/lab4/StorageMessage.class" afterDir="false" />
-    </list>
+    <list default="true" id="b3f830f9-523f-47dd-b7e2-ec84b6c27267" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/GetMessage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -148,7 +139,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/MainActor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
@@ -253,8 +244,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="412" />
-    <option name="y" value="140" />
+    <option name="x" value="258" />
+    <option name="y" value="187" />
     <option name="width" value="1187" />
     <option name="height" value="636" />
   </component>
@@ -310,7 +301,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573216372325" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573216547568" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -394,15 +385,15 @@
       <updated>1572625972528</updated>
       <workItem from="1572625979489" duration="30910000" />
       <workItem from="1572691509383" duration="598000" />
-      <workItem from="1573213040574" duration="3278000" />
+      <workItem from="1573213040574" duration="3532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34786000" />
+    <option name="totallyTimeSpent" value="35040000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="568" width="1187" height="636" extended-state="0" />
+    <frame x="258" y="187" width="1187" height="636" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30305678" />
@@ -540,34 +531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/StorageMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-          <folding>
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/StorageCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/GetMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#112#113#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#187#188#0" expanded="true" />
-            <element signature="e#219#220#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -607,6 +574,30 @@
           <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/StorageMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <folding>
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/GetMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#112#113#0" expanded="true" />
+            <element signature="e#154#155#0" expanded="true" />
+            <element signature="e#187#188#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
           </folding>
         </state>
       </provider>
