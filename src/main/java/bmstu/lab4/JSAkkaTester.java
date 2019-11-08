@@ -21,7 +21,6 @@ import java.util.concurrent.CompletionStage;
 import scala.concurrent.Future;
 
 
-//++
 public class JSAkkaTester extends AllDirectives {
 
     static ActorRef mainActor;

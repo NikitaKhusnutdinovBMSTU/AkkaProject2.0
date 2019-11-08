@@ -9,7 +9,7 @@ public class StorageMessage {
     private final Object[] param;
     private final String testName;
 
-    public StorageMessage(String result, String expectedResult, String checker, Object[] param, String testName){
+    public StorageMessage(String result, String expectedResult, String checker, Object[] param, String testName) {
         this.result = result;
         this.expectedResult = expectedResult;
         this.checker = checker;
@@ -18,16 +18,15 @@ public class StorageMessage {
     }
 
 
-
-    public String getResult(){
+    public String getResult() {
         return result;
     }
 
-    public String getExpectedResult(){
+    public String getExpectedResult() {
         return expectedResult;
     }
 
-    public String getChecker(){
+    public String getChecker() {
         return checker;
     }
 

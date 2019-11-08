@@ -9,7 +9,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
-// ++
+
 public class JSExecutor extends AbstractActor {
     private static final String JS_ENGINE = "nashorn";
     private static final String WRONG_ANSWER = "WRONG ANSWER!";
