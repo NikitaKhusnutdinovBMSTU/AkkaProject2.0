@@ -23,7 +23,7 @@ import scala.concurrent.Future;
 public class JSAkkaTester extends AllDirectives {
 
     static ActorRef mainActor;
-    private static String 
+    private static final String
 
     public static void main(String[] args) throws Exception {
 
