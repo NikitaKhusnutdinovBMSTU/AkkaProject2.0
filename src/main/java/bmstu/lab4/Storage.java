@@ -9,7 +9,7 @@ import java.util.*;
 
 
 public class Storage extends AbstractActor {
-    private Map<String, ArrayList<StorageMessage>> data = new HashMap<>();
+    private Map<Integer, ArrayList<StorageMessage>> data = new HashMap<>();
 
 
     @Override
@@ -25,11 +25,11 @@ public class Storage extends AbstractActor {
                 })
 
                 .match(StorageCommand.class, msg -> {
-                    String pID = Integer.toString(msg.getPackageID());
-                    if (!data.containsKey(pID)){
-                        data.put(pID, new ArrayList<>());
+
+                    if (!data.containsKey(msg.getPackageID())){
+                        data.put(msg.getPackageID(), new ArrayList<>());
                     }
-                    data.get(pID).add(msg.getStorageMessage());
+                    data.get(msg.getPackageID()).add(msg.getStorageMessage());
                 }
                 )
                 .build();
