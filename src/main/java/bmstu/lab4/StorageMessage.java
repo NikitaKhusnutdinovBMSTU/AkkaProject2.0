@@ -1,5 +1,6 @@
 package bmstu.lab4;
 
+//+
 public class StorageMessage {
 
     private final String result;
@@ -17,9 +18,6 @@ public class StorageMessage {
     }
 
 
-//    public String toString(){
-//        return "\n TO STRING ->" + result + "..." + expectedResult + "\n";
-//    }
 
     public String getResult(){
         return result;
