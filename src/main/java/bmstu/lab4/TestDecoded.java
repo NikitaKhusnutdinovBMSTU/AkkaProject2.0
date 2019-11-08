@@ -3,6 +3,7 @@ package bmstu.lab4;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+//+
 public class TestDecoded {
     private final String testName;
     private final String expectedResult;
