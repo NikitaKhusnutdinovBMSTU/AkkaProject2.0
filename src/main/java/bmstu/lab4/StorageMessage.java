@@ -8,7 +8,7 @@ public class StorageMessage {
     private final Object[] param;
     private final String testName;
 
-    public StorageMessage(String result, String expectedResult, Object[] param, String testName, int indexId){
+    public StorageMessage(String result, String expectedResult, Object[] param, String testName){
         this.result = result;
         this.expectedResult = expectedResult;
         this.param = param;
@@ -22,6 +22,10 @@ public class StorageMessage {
         }else{
             this.checker = "WRONG ANSWER!";
         }
+    }
+
+    public String toString(){
+        return "\n TO STRING ->" + result + "..." + expectedResult + "\n";
     }
 
     private String getResult(){

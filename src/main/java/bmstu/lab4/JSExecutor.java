@@ -29,15 +29,13 @@ public class JSExecutor extends AbstractActor {
             }
             Invocable invocable = (Invocable) engine;
             String res = invocable.invokeFunction(functionName, params).toString();
-            //PackageDecoded packageDecoded = receivedMSG.getValue();
-            //packageDecoded.wrightResult(receivedMSG.getKey(), res);
             TestDecoded curTest = receivedMSG.getValue().getTest(receivedMSG.getKey());
             StorageMessage sMsg = new StorageMessage(
+                    curTest.getExpectedResult(),
                     res,
-                    curTest.getResult(),
                     params,
-                    curTest.getTestName(),
-                    receivedMSG.getKey());
+                    curTest.getTestName()
+            );
             StorageCommand storageCommand = new StorageCommand(receivedMSG.getKey(), sMsg);
             getSender().tell(storageCommand, ActorRef.noSender());
         }).build();
