@@ -47,5 +47,5 @@ public class StorageMessage {
     public String getTestName() {
         return testName;
     }
-    
+
 }
