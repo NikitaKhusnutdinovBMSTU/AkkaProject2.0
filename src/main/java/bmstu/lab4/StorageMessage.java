@@ -28,15 +28,24 @@ public class StorageMessage {
         return "\n TO STRING ->" + result + "..." + expectedResult + "\n";
     }
 
-    private String getResult(){
+    public String getResult(){
         return result;
     }
 
-    private String getExpectedResult(){
+    public String getExpectedResult(){
         return expectedResult;
     }
 
-    private String getChecker(){
+    public String getChecker(){
         return checker;
     }
+
+    public Object[] getParam() {
+        return param;
+    }
+
+    public String getTestName() {
+        return testName;
+    }
+    
 }
