@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3f830f9-523f-47dd-b7e2-ec84b6c27267" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java" afterDir="false" />
-    </list>
+    <list default="true" id="b3f830f9-523f-47dd-b7e2-ec84b6c27267" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,13 +36,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="16" />
-          <entry key="java" value="7504" />
+          <entry key="java" value="7525" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7504" />
+          <entry key="JAVA" value="7525" />
           <entry key="PLAIN_TEXT" value="16" />
           <entry key="XML" value="3" />
         </counts>
@@ -80,11 +78,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/StorageMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            <state relative-caret-position="297">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#765#766#0" expanded="true" />
                 <element signature="e#844#845#0" expanded="true" />
+                <element signature="e#1064#1065#0" expanded="true" />
+                <element signature="e#1092#1093#0" expanded="true" />
+                <element signature="e#1127#1128#0" expanded="true" />
+                <element signature="e#1158#1159#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,8 +140,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state relative-caret-position="114">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -221,11 +223,11 @@
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/PackageDecoded.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/MainActor.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/TestDecoded.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/StorageMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/JSAkkaTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/JSExecutor.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/StorageCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bmstu/lab4/StorageMessage.java" />
       </list>
     </option>
   </component>
@@ -252,8 +254,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="98" />
-    <option name="y" value="54" />
+    <option name="x" value="93" />
+    <option name="y" value="507" />
     <option name="width" value="1187" />
     <option name="height" value="636" />
   </component>
@@ -309,7 +311,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573217148605" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573217175649" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -393,18 +395,18 @@
       <updated>1572625972528</updated>
       <workItem from="1572625979489" duration="30910000" />
       <workItem from="1572691509383" duration="598000" />
-      <workItem from="1573213040574" duration="3892000" />
+      <workItem from="1573213040574" duration="4137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35400000" />
+    <option name="totallyTimeSpent" value="35645000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="107" width="1187" height="636" extended-state="0" />
+    <frame x="93" y="507" width="1187" height="636" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30305678" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30305678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -413,7 +415,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3023622" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28492647" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28492647" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -492,19 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/ExecuteMSG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          <folding>
-            <element signature="e#183#184#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/PackageDecoded.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -569,17 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/StorageMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-          <folding>
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/GetMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -606,10 +584,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/ExecuteMSG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding>
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/StorageMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bmstu/lab4/Storage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        <state relative-caret-position="114">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
