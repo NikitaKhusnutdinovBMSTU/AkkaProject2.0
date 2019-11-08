@@ -34,9 +34,15 @@ public class JSExecutor extends AbstractActor {
                 check = "CORRECT ANSWER!";
             }
 
-            
-
-            //getSender().tell(storageCommand, ActorRef.noSender());
+            StorageMessage storageMessage = new StorageMessage(
+                    res,
+                    test.getExpectedResult(),
+                    check,
+                    test.getParams(),
+                    test.getTestName()
+            );
+            StorageCommand storageCommand = new StorageCommand(packageDecoded.getPackageId(), storageMessage);
+            getSender().tell(storageCommand, ActorRef.noSender());
         }).build();
     }
 
