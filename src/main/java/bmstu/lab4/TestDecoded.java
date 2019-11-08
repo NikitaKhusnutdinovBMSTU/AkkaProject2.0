@@ -25,11 +25,6 @@ public class TestDecoded {
         return params;
     }
 
-    public void setResult(String res){
-        this.result = res;
-        this.checkResults();
-    }
-
     public String getResult(){
         return result;
     }
@@ -45,12 +40,5 @@ public class TestDecoded {
     public String getChecker(){
         return checker;
     }
-
-    private void checkResults(){
-        if(result.toLowerCase().equals(expectedResult.toLowerCase())){
-            this.checker = "CORRECT ANSWER!";
-        }else{
-            this.checker = "WRONG ANSWER!";
-        }
-    }
+    
 }
