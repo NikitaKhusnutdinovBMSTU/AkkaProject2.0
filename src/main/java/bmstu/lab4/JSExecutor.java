@@ -10,41 +10,33 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 public class JSExecutor extends AbstractActor {
-
+    private static final String JS_ENGINE = "nashorn";
 
     @Override
     public Receive createReceive() {
 
         return ReceiveBuilder.create().match(ExecuteMSG.class, m -> {
-            //initialisePair(m.getMsg());
-            Pair<Integer, PackageDecoded> receivedMSG = m.getMsg();
-            ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-            String jsScript = receivedMSG.getValue().getJSScript();
-            String functionName = receivedMSG.getValue().getFunctionName();
-            Object[] params = receivedMSG.getValue().getTest(receivedMSG.getKey()).getParams();
-            try {
-                engine.eval(jsScript);
-            } catch (ScriptException e) {
+            Pair<Integer, PackageDecoded> msg = m.getMsg();
+            int index = msg.getKey();
+            PackageDecoded packageDecoded = msg.getValue();
+            TestDecoded test = packageDecoded.getTests()[index];
+            ScriptEngine engine = new ScriptEngineManager().getEngineByName(JS_ENGINE);
+            try{
+                engine.eval(packageDecoded.getJSScript());
+            } catch (ScriptException e){
                 e.printStackTrace();
             }
             Invocable invocable = (Invocable) engine;
-            String res = invocable.invokeFunction(functionName, params).toString();
-            String checker;
-            TestDecoded curTest = receivedMSG.getValue().getTest(receivedMSG.getKey());
-            if(res.toLowerCase().equals(curTest.getExpectedResult().toLowerCase())){
-                checker = "CORRECT ANSWER!";
-            }else{
-                checker = "WRONG ANSWER!";
+            String res = invocable.invokeFunction(packageDecoded.getFunctionName(), test.getParams()).toString();
+            String check = "WRONG ANSWER!";
+
+            if(res.equals(test.getExpectedResult())){
+                check = "CORRECT ANSWER!";
             }
-            StorageMessage sMsg = new StorageMessage(
-                    res,
-                    curTest.getExpectedResult(),
-                    checker,
-                    params,
-                    curTest.getTestName()
-            );
-            StorageCommand storageCommand = new StorageCommand(receivedMSG.getKey(), sMsg);
-            getSender().tell(storageCommand, ActorRef.noSender());
+
+            
+
+            //getSender().tell(storageCommand, ActorRef.noSender());
         }).build();
     }
 
