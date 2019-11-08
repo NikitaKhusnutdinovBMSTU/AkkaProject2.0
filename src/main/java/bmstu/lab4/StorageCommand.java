@@ -4,18 +4,20 @@ package bmstu.lab4;
 import javafx.util.Pair;
 
 public class StorageCommand {
-    private Pair<Integer, StorageMessage> storageMessagePair;
+    private final int packageID;
+    private final StorageMessage storageMessage;
 
     public StorageCommand(int idx, StorageMessage storageMsg){
-        storageMessagePair = new Pair<>(idx, storageMsg);
+        this.packageID = idx;
+        this.storageMessage = storageMsg;
     }
 
     public int getPackageID(){
-        return storageMessagePair.getKey();
+        return packageID;
     }
 
     public StorageMessage getStorageMessage(){
-        return storageMessagePair.getValue();
+        return storageMessage;
     }
 
 }
