@@ -19,18 +19,18 @@ public class JSExecActor extends AbstractActor {
     public Receive createReceive() {
 
         return ReceiveBuilder.create().match(ExecuteMSG.class, m -> {
-            Pair<Integer, PackageDecoded> msg = m.getMsg();
+            Pair<Integer, FunctionPackage> msg = m.getMsg();
             int index = msg.getKey();
-            PackageDecoded packageDecoded = msg.getValue();
-            Test test = packageDecoded.getTests()[index];
+            FunctionPackage functionPackage = msg.getValue();
+            Test test = functionPackage.getTests()[index];
             ScriptEngine engine = new ScriptEngineManager().getEngineByName(JS_ENGINE);
             try{
-                engine.eval(packageDecoded.getJSScript());
+                engine.eval(functionPackage.getJSScript());
             } catch (ScriptException e){
                 e.printStackTrace();
             }
             Invocable invocable = (Invocable) engine;
-            String res = invocable.invokeFunction(packageDecoded.getFunctionName(), test.getParams()).toString();
+            String res = invocable.invokeFunction(functionPackage.getFunctionName(), test.getParams()).toString();
             String check = WRONG_ANSWER;
 
             if(res.equals(test.getExpectedResult())){
@@ -44,7 +44,7 @@ public class JSExecActor extends AbstractActor {
                     test.getParams(),
                     test.getTestName()
             );
-            StorageCommand storageCommand = new StorageCommand(packageDecoded.getPackageId(), storageMessage);
+            StorageCommand storageCommand = new StorageCommand(functionPackage.getPackageId(), storageMessage);
             getSender().tell(storageCommand, ActorRef.noSender());
         }).build();
     }

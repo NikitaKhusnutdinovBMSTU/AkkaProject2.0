@@ -22,7 +22,7 @@ public class MainActor extends AbstractActor {
     public Receive createReceive() {
 
         return ReceiveBuilder.create().match(
-                PackageDecoded.class, pack -> {
+                FunctionPackage.class, pack -> {
                     int len = pack.getTests().length;
                     for (int idx = 0; idx < len; idx++) {
                         executors.tell(new ExecuteMSG(idx, pack), storage);

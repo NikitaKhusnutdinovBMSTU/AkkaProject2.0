@@ -72,7 +72,7 @@ public class JSAkkaTester extends AllDirectives {
                         )
                 ),
                 post(
-                        () -> entity(Jackson.unmarshaller(PackageDecoded.class),
+                        () -> entity(Jackson.unmarshaller(FunctionPackage.class),
                                 msg -> {
                                     mainActor.tell(msg, ActorRef.noSender());
                                     return complete(POST_MESSAGE);

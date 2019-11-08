@@ -5,14 +5,14 @@ import javafx.util.Pair;
 
 public class ExecuteMSG {
 
-    private Pair<Integer, PackageDecoded> msg;
+    private Pair<Integer, FunctionPackage> msg;
 
 
-    public ExecuteMSG(int a, PackageDecoded packageDecoded) {
-        this.msg = new Pair<>(a, packageDecoded);
+    public ExecuteMSG(int a, FunctionPackage functionPackage) {
+        this.msg = new Pair<>(a, functionPackage);
     }
 
-    public Pair<Integer, PackageDecoded> getMsg() {
+    public Pair<Integer, FunctionPackage> getMsg() {
         return this.msg;
     }
 }
